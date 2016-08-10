@@ -28,9 +28,10 @@ namespace GameExample
         {
             return this.name;
         }
-        public void changeName(string name)
+        public void changeName()
         {
-            this.name = name;
+            Console.WriteLine("Please enter new name");
+            this.name = Console.ReadLine();
         }
     }
 }
