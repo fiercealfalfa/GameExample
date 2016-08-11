@@ -8,30 +8,30 @@ namespace GameExample
 {
     class Player
     {
-        string name;
-        int score; 
+        protected string name;
+        protected int score; 
 
-        public Player(string name)
+        public Player()
         {
-            this.name = name;
             this.score = 0;
         }
-        public int getScore()
+        public int GetScore()
         {
             return this.score; 
         }
-        public void addOneToScore()
+        public void AddOneToScore()
         {
             this.score += 1;
         }
-        public string getName()
+        public virtual string GetName()
         {
             return this.name;
         }
-        public void changeName()
+        public virtual string GetChoice()
         {
-            Console.WriteLine("Please enter new name");
-            this.name = Console.ReadLine();
+            string choice = "";
+            return choice;
         }
+
     }
 }

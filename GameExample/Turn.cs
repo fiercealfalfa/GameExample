@@ -16,10 +16,12 @@ namespace GameExample
         }
         public void TakeTurn()
         {
-            Console.WriteLine("It is your turn {0}", player.getName());
-            player.addOneToScore();
-            player.addOneToScore();
-            Console.WriteLine("Your turn is over {0}, your score is {1}", player.getName(), player.getScore());
+            Console.WriteLine("It is your turn {0}", player.GetName());
+            string playerchoice = player.GetChoice();
+            Console.WriteLine("Your Choice was {0}", playerchoice);
+            player.AddOneToScore();
+            player.AddOneToScore();
+            Console.WriteLine("Your turn is over {0}, your score is {1}", player.GetName(), player.GetScore());
             Console.ReadKey();
         }
     }
